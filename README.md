@@ -1,7 +1,5 @@
 # BookManagementAppAngular16
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
-
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
@@ -10,18 +8,29 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Create the modules
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+`ng generate module home`
 
-## Running unit tests
+## Generate the component for created module
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+`ng generate component home --module=home`
 
-## Running end-to-end tests
+## Generate the reservation service inside the reservation folder
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+`ng generate service reservation/reservation`
 
-## Further help
+## Generating the reservation model interface
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+`ng generate interface models/reservation`
+
+## Generate the environment files
+
+```bash
+ng g environments
+
+// Then this will create a environment.ts and environment.development.ts files
+// We need to run ng serve as bellow wo get development values
+
+ng serve --configuration=development
+```
