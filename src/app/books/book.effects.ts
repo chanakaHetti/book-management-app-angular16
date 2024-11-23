@@ -5,7 +5,7 @@ import { mergeMap, map, catchError, of } from 'rxjs';
 import * as bookActions from './book.actions';
 import { BookService } from './book.service';
 
-// @Injectable()
+@Injectable()
 export class BookEffects {
   // This is an NgRx Effect that responds to 'AddBook' actions
   addBook$ = createEffect(() =>
